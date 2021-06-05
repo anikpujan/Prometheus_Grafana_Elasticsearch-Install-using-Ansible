@@ -1,0 +1,11 @@
+- name: Install ElasticSearch 
+  hosts: localhost
+  connection: local
+  user: root
+  become_method: sudo
+  become: true
+  gather_facts: false
+  roles:
+  - elasticsearch
+  - prometheus
+  - grafana
